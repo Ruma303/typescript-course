@@ -5,5 +5,3 @@
         app.innerHTML = type;
     }
 })();
-
-
