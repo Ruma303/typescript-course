@@ -82,6 +82,38 @@
     let b = "world" as stringOrNumber; // Meno specifico
     let c = "world" as World; // Ancora più Specifico */
 
+    /* const addOrConcat = (a: number, b: number, c: 'add' | 'concat'): string | number => {
+        if (c === 'add') return a + b;
+        return '' + a + b;
+    }
+
+    //! Il compilatore ignorerà il tipo, ma il risultato sarà un errore in quanto la funzione restituirà una stringa
+    let first: string = addOrConcat(5, 10, 'add') as string;
+    let second: number = addOrConcat(5, 10, 'concat') as number;
+
+    console.log(typeof first); // number
+    console.log(typeof second); // string */
+
+
+    //# Cambiare un tipo literal
+    // 10 as string; // Error
+    // (10 as unknown) as string;
+
+
+    //# DOM
+    /* const img = document.querySelector('img')!;
+    img.src */
+
+
+    //# Non-null assertion operator
+    /* const whichElement = document.querySelector('#img')! as HTMLImageElement;
+    whichElement.src */
+
+
+    //# Optional chaining
+    /* const ifElement = document.querySelector('#img') as HTMLImageElement;
+    ifElement?.src */
+
 
 
     //% Novità sui tipi
