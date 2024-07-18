@@ -51,6 +51,14 @@ let c: numAndStr = "Hello"; */
 //let strLength: number = (someValue as string).length;
 //console.log("Lunghezza stringa: ", strLength);
 //let strLength: number = (<string>someValue).length;
+//# Specificità dei dati di ritorno
+/* type onlyString = string;
+type stringOrNumber = string | number;
+type World = "world";
+
+let a: onlyString = "hello"; // Più specifico
+let b = "world" as stringOrNumber; // Meno specifico
+let c = "world" as World; // Ancora più Specifico */
 //% Novità sui tipi
 //, any
 /* let notSure: any = 4;
