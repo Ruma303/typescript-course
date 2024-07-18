@@ -1,52 +1,57 @@
 //, Type annotation
-function add(x, y) {
+/* function add(x: number, y: number): number {
     return x + y;
 }
-function log(message) {
+
+function log(message: string): void {
     console.log(message);
-}
+} */
 //, Parametri Default
-function profile(name, age) {
-    if (age === void 0) { age = 20; }
-    return "Name: ".concat(name, ", Age: ").concat(age);
+/* function profile(name: string, age: number = 20): string {
+    return `Name: ${name}, Age: ${age}`;
 }
-console.log(profile('Mario'));
+console.log(profile('Mario')); */
 // Name: Mario, Age: 20
 //, Parametri opzionali
-function sum(x, y) {
+/* function sum(x: number, y?: number): number {
     return y ? x + y : x;
 }
-console.log(sum(10)); // 10
+console.log(sum(10)); // 10 */
 //, Rest Parameters
-function sumAll() {
-    var numbers = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        numbers[_i] = arguments[_i];
-    }
-    return numbers.reduce(function (acc, val) { return acc + val; }, 0);
+/* function sumAll(...numbers: number[]): number {
+    return numbers.reduce((acc, val) => acc + val, 0);
 }
-sumAll(1, 2, 3, 4, 5); // 15
+sumAll(1, 2, 3, 4, 5); // 15 */
+//, Overloading
+//* Definizione delle firme di overload
+/* function getInfo(id: number): string; // Overload 1
+function getInfo(email: string): string; // Overload 2
+function getInfo(name: string, address: string): string; // Overload 3 */
 //* Implementazione della funzione che deve essere compatibile con tutte le firme
-function getInfo(input, address) {
+/* function getInfo(input: number | string, address?: string): string {
     if (typeof input === "number") {
-        return "Fetching user data by ID: ".concat(input);
+        return `Fetching user data by ID: ${input}`;
+    } else if (typeof input === "string" && address) {
+        return `Fetching user data by name: ${input}, address: ${address}`;
+    } else {
+        return `Fetching user data by email: ${input}`;
     }
-    else if (typeof input === "string" && address) {
-        return "Fetching user data by name: ".concat(input, ", address: ").concat(address);
-    }
-    else {
-        return "Fetching user data by email: ".concat(input);
-    }
-}
+} */
 //* Utilizzo degli overload
-var infoById = getInfo(101); // Chiama la prima firma
-var infoByEmail = getInfo("user@example.com"); // Chiama la seconda firma
-var infoByNameAndAddress = getInfo("John Doe", "123 Main St"); // Chiama la terza firma
-var somma = function (x, y) {
+/* const infoById = getInfo(101); // Chiama la prima firma
+const infoByEmail = getInfo("user@example.com"); // Chiama la seconda firma
+const infoByNameAndAddress = getInfo("John Doe", "123 Main St"); // Chiama la terza firma */
+//, Funzioni come tipi
+/* type Operazione = (x: number, y: number) => number;
+
+type Log = {(x: string): string};
+
+let somma: Operazione = function(x, y) {
     return x + y;
 };
-var differenza = function (x, y) {
+let differenza: Operazione = function(x, y) {
     return x - y;
 };
-console.log(somma(5, 3)); // 8
-console.log(differenza(5, 3)); // 2
+
+console.log(somma(5, 3));      // 8
+console.log(differenza(5, 3)); // 2 */ 
