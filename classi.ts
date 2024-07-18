@@ -16,7 +16,7 @@
     oggetto.metodoDerivato(); // Metodo della classe derivata */
 
 
-
+    //, Modificatori di accesso
     /* class Classe {
         public pubblico: string = "Accessibile ovunque";
         private privato: string = "Accessibile solo in Classe";
@@ -33,6 +33,16 @@
     console.log(oggetto.pubblico); // OK
     console.log(oggetto.privato);  // Errore: Proprietà 'privato' è privata
     console.log(oggetto.protetto); // Errore: Proprietà 'protetto' è protetta */
+
+
+    //# Obbligo di inizializzazione delle variabili
+    /* class Test {
+        //p1!: number;
+
+        cannotAccessToP1() {
+            this.p1 = 10;
+        }
+    } */
 
 
     //, Inizializzare le proprietà
@@ -53,7 +63,6 @@
             this.#p8 = true;
         }
     } */
-
 
 
     //, Override dei metodi
