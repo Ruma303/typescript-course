@@ -2,7 +2,7 @@
 
     //, Generic Object Types
 
-    type Specific = {
+    /* type Specific = {
         first: string;
         second: string;
     };
@@ -24,11 +24,11 @@
         prop1: 5,
         prop2: "hello",
         prop3: true
-    };
+    }; */
 
 
     //, Generics functions interface
-    function getMiddleElement<T>(items: T[]): T | undefined {
+    /* function getMiddleElement<T>(items: T[]): T | undefined {
         if (items.length === 0) {
             return undefined;
         }
@@ -48,19 +48,18 @@
 
 
     //, Generics functions type
-
     type GetArrayLength<T> = (items: T[]) => number;
 
     let getArrayLength: GetArrayLength<number> = (items): number => {
         return items.length;
     }
 
-    let arrLength = getArrayLength([1, 2, 3, 4, 5]);
+    let arrLength = getArrayLength([1, 2, 3, 4, 5]); */
 
 
 
     //, Più parametri generici
-    function pairElements<T, U>(first: T, second: U): [T, U] {
+    /* function pairElements<T, U>(first: T, second: U): [T, U] {
         return [first, second];
     }
 
@@ -71,9 +70,17 @@
     console.log(result2);  // [true, { name: "Alice" }]
 
     const result3 = pairElements(["apple", "banana"], 42);
-    console.log(result3);  // [["apple", "banana"], 42]
+    console.log(result3);  // [["apple", "banana"], 42] */
 
 
 
     //, Bounded Generics
+
+
+
+    //, Generics Constraints
+
+
+
+    //, Type Assertions
 
