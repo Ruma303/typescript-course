@@ -66,14 +66,8 @@ const result3 = pairElements(["apple", "banana"], 42);
 console.log(result3);  // [["apple", "banana"], 42] */
 //, Bounded Generics
 //, Generics Constraints
-//, Type Assertions
+//, Type Assertions con generics
 var a = 'hello';
-var addOrConcat = function (a, b, c) {
-    if (c === 'add')
-        return a + b;
-    return '' + a + b;
-};
-var first = addOrConcat(5, 10, 'add');
-var second = addOrConcat(5, 10, 'concat'); // Il compilatore ignorerà il tipo, ma il risultato sarà un errore in quanto la funzione restituirà una stringa
+var myImg = document.querySelector('img');
 //, Type Narrowing
 //, Type Guards

@@ -82,17 +82,9 @@
 
 
 
-    //, Type Assertions
+    //, Type Assertions con generics
     let a = <string | number>'hello';
-
-    const addOrConcat = (a: number, b: number, c: 'add' | 'concat'): string | number => {
-        if (c === 'add') return a + b;
-        return '' + a + b;
-    }
-
-    let first: string = addOrConcat(5, 10, 'add') as string;
-    let second: number = addOrConcat(5, 10, 'concat') as number; // Il compilatore ignorerà il tipo, ma il risultato sarà un errore in quanto la funzione restituirà una stringa
-
+    const myImg = <HTMLImageElement>document.querySelector('img');
 
 
 
