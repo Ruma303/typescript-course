@@ -1,4 +1,3 @@
-"use strict";
 //% Ereditarietà tra classi
 //, Visibilità dei membri
 /* class ClasseBase {
@@ -14,6 +13,7 @@ class ClasseDerivata extends ClasseBase {
 const oggetto = new ClasseDerivata();
 oggetto.metodoBase(); // Metodo della classe base
 oggetto.metodoDerivato(); // Metodo della classe derivata */
+//, Modificatori di accesso
 /* class Classe {
     public pubblico: string = "Accessibile ovunque";
     private privato: string = "Accessibile solo in Classe";
@@ -30,6 +30,14 @@ const oggetto = new Classe();
 console.log(oggetto.pubblico); // OK
 console.log(oggetto.privato);  // Errore: Proprietà 'privato' è privata
 console.log(oggetto.protetto); // Errore: Proprietà 'protetto' è protetta */
+//# Obbligo di inizializzazione delle variabili
+/* class Test {
+    //p1!: number;
+
+    cannotAccessToP1() {
+        this.p1 = 10;
+    }
+} */
 //, Inizializzare le proprietà
 /* class Classe {
     private p1 : number = 10;
@@ -48,6 +56,26 @@ console.log(oggetto.protetto); // Errore: Proprietà 'protetto' è protetta */
         this.#p8 = true;
     }
 } */
+//, Getters e Setters
+/* class Person {
+    private _name: string = "Default";
+
+    get name(): string {
+        return this._name;
+    }
+    set name(value: string) {
+        this._name = value;
+    }
+}
+
+const person = new Person();
+
+//* Getter
+console.log(person.name); // Default
+
+//* Setter
+person.name = "Mario";
+console.log(person.name); // Mario */
 //, Override dei metodi
 /* class Person {
     public name(): string {

@@ -65,6 +65,29 @@
     } */
 
 
+    //, Getters e Setters
+    /* class Person {
+        private _name: string = "Default";
+
+        get name(): string {
+            return this._name;
+        }
+        set name(value: string) {
+            this._name = value;
+        }
+    }
+
+    const person = new Person();
+
+    //* Getter
+    console.log(person.name); // Default
+
+    //* Setter
+    person.name = "Mario";
+    console.log(person.name); // Mario */
+
+
+
     //, Override dei metodi
     /* class Person {
         public name(): string {
