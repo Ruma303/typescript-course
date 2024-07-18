@@ -64,6 +64,15 @@
     let c: numAndStr = "Hello"; */
 
 
+    //, Type assertion
+
+    //let someValue: any = "Questa è una stringa molto lunga";
+    //let strLength: number = (someValue as string).length;
+    //console.log("Lunghezza stringa: ", strLength);
+
+    //let strLength: number = (<string>someValue).length;
+
+
 
     //% Novità sui tipi
 
@@ -200,7 +209,7 @@
 
     //, Type Narrowing
 
-    type Item = { prop: string; };
+    /* type Item = { prop: string; };
 
     function itemOrItems(name: Item | Item[]) { // oggetto o array
         if (Array.isArray(name)) {
@@ -214,12 +223,12 @@
     let arr = [{ prop: "Prop1" }, { prop: "Prop2" }];
 
     console.log(itemOrItems(obj)); // Prop1
-    console.log(itemOrItems(arr)); // 2
+    console.log(itemOrItems(arr)); // 2 */
 
 
     //, Object Narrowing
 
-    type Book = {
+    /* type Book = {
         title: string;
         pages: number;
         author: string;
@@ -241,14 +250,14 @@
 
     let book2: BookName = book1;
     console.log(book2);
-    console.log(book2.title);
+    console.log(book2.title); */
     //console.log(book2.pages);
 
 
     //, Type Guard
 
     //# typeof
-    let price = 10;
+    /* let price = 10;
 
     function getType(price: number | string) {
         if (typeof price === 'number') {
@@ -256,11 +265,11 @@
         } else {
             return price;
         }
-    }
+    } */
 
     //# instanceof
 
-    let newDate = new Date();
+    /* let newDate = new Date();
 
     function isDate(date: Date | string) {
         if (date instanceof Date) {
@@ -268,12 +277,12 @@
         } else {
             return date;
         }
-    }
+    } */
 
     //# user-defined type guard
 
 
-    let someValue: string = "Hello World";
+    /* let someValue: string = "Hello World";
 
     function isString(value: string) {
         if (someValue === "string") {
@@ -281,13 +290,13 @@
         }
     }
 
-    console.log(isString(someValue));
+    console.log(isString(someValue)); */
 
 
 
     //, Type Widening
 
-    type Course = {
+    /* type Course = {
         name: string;
         duration: number;
     };
@@ -301,4 +310,4 @@
         return course.name;
     }
 
-    console.log(courseName(course)); // TypeScript
+    console.log(courseName(course)); */ // TypeScript
